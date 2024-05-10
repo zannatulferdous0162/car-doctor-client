@@ -12,6 +12,12 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
+    "react/prop-types": [
+      "error",
+      {
+        ignore: ["service"] // Ignore prop validation for 'service.title'
+      },
+    ],
     'react/jsx-no-target-blank': 'off',
     'react-refresh/only-export-components': [
       'warn',
